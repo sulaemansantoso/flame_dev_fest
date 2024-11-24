@@ -1,4 +1,7 @@
+import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_flame_devfest/pages/gameOverOverlay.dart';
+import 'package:flutter_flame_devfest/pages/mainGamePage.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,11 +12,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    MainGamePage gamePage = MainGamePage();
+    return Material(
+      child: GameWidget(
+        game: gamePage,
+        overlayBuilderMap: {
+          "gameover": (context, game) => Gameoveroverlay(game: gamePage),
+        },
       ),
     );
   }

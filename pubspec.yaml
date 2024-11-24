@@ -18,3 +18,10 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/audio/
+    - assets/images/
+    - assets/images/alienBlue/
+    - assets/images/background/
+    - assets/images/bad_item/
+    - assets/images/item/
