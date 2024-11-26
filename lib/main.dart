@@ -16,6 +16,7 @@ class MainApp extends StatelessWidget {
     return Material(
       child: GameWidget(
         game: gamePage,
+        initialActiveOverlays: const ["gameover"],
         overlayBuilderMap: {
           "gameover": (context, game) => Gameoveroverlay(game: gamePage),
         },

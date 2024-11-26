@@ -9,20 +9,31 @@ class Gameoveroverlay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Card(
-        child: Column(
-          children: [
-            const Text("Game Over"),
-            ElevatedButton(
-              onPressed: () {
-                game.resumeEngine();
-                game.overlays.remove("gameover");
-                game.reset();
-              },
-              child: const Text("Play Again"),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Card(
+              child: Padding(
+            padding: const EdgeInsets.all(30.0),
+            child: Column(
+              children: [
+                const Text(
+                  "Game Over",
+                  style: TextStyle(fontSize: 24),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    game.resumeEngine();
+                    game.overlays.remove("gameover");
+                    game.reset();
+                  },
+                  child: const Text("Play Again"),
+                ),
+              ],
             ),
-          ],
-        ),
+          )),
+        ],
       ),
     );
   }
