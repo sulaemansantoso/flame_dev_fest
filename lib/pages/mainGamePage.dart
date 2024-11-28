@@ -12,6 +12,12 @@ import 'package:flutter_flame_devfest/component/player.dart';
 import 'package:flutter_flame_devfest/component/uiComponent.dart';
 
 class MainGamePage extends FlameGame with TapDetector, HasCollisionDetection {
+  @override
+  onMount() {
+    pauseEngine();
+    super.onMount();
+  }
+
   late Player p = Player();
   late Background bg = Background();
   late Itemspawner sp = Itemspawner();
