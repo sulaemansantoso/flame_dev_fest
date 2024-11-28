@@ -10,7 +10,7 @@ enum PlayerState { idle, walk }
 
 class Player extends SpriteAnimationGroupComponent<PlayerState>
     with HasGameRef<MainGamePage> {
-  int _live = 3;
+  int _live = 1;
   bool isHurt = false;
   int hurtTimer = 0;
   int hurtCD = 10;
@@ -18,7 +18,7 @@ class Player extends SpriteAnimationGroupComponent<PlayerState>
   int get live => _live;
 
   void reset() {
-    _live = 3;
+    _live = 1;
     // isHurt = false;
     // hurtTimer = 0;
     // decorator.removeLast();

@@ -26,7 +26,7 @@ class StartGameOverlay extends StatelessWidget {
                   onPressed: () {
                     game.resumeEngine();
                     game.overlays.remove("startgame");
-                    game.reset();
+                    // game.reset();
                   },
                   child: const Text("Play "),
                 ),

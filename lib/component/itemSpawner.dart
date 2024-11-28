@@ -10,7 +10,11 @@ class Itemspawner extends Component with HasGameRef<MainGamePage> {
   late SpawnComponent sp;
 
   void reset() {
-    sp.removeAll(sp.children);
+    for (var i in game.children) {
+      if (i is Item) {
+        game.remove(i);
+      }
+    }
   }
 
   @override
